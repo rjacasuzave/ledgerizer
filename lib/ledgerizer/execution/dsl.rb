@@ -97,7 +97,7 @@ module Ledgerizer
         end
 
         def create_entry(executor_params, &block)
-          @executor = Ledgerizer::EntryExecutor.new(executor_params)
+          @executor = Ledgerizer::EntryExecutor.new(**executor_params)
           instance_eval(&block) if block
           @executor.execute
         ensure
