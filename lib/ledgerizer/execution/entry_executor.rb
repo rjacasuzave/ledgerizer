@@ -19,9 +19,14 @@ module Ledgerizer
     end
 
     def execute
-      validate_existent_movements!
-      validate_zero_trial_balance!
-      create_entry
+      begin
+        validate_existent_movements!
+        validate_zero_trial_balance!
+        create_entry
+      rescue => exception
+        p exception
+        return false
+      end
       true
     end
 
