@@ -88,7 +88,12 @@ module Ledgerizer
         mirror_account_config[:currency] = currency
         add_account_to_collection(mirror_account_config)
       end
-      l eventually break your app in R
+
+      def find_revaluation(name)
+        revaluations.find { |revaluation| revaluation.name == name }
+      end
+
+      private
 
       def add_main_account(account_config)
         add_account_to_collection(account_config)
