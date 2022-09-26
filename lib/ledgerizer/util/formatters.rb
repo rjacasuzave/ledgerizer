@@ -31,8 +31,8 @@ module Ledgerizer
 
     def format_string_to_class(value)
       value.to_s.camelize.constantize
-    rescue NameError
-      nil
+    #rescue NameError
+      #nil
     end
 
     def format_currency_by_strategy(currency, strategy)
