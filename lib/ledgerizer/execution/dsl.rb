@@ -15,10 +15,9 @@ module Ledgerizer
 
           case dsl_action_config[:action]
           when :entry
-            p arguments
-            execute_entry(dsl_action_config[:identifier], arguments, &block)
+            execute_entry(dsl_action_config[:identifier], **(arguments.first), &block)
           when :revaluation
-            execute_revaluation(dsl_action_config[:identifier], arguments, &block)
+            execute_revaluation(dsl_action_config[:identifier], **(arguments.first), &block)
           else
             super
           end
