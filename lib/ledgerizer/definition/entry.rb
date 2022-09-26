@@ -10,7 +10,7 @@ module Ledgerizer
       def initialize(code:, document:)
         @code = format_to_symbol_identifier(code)
         document_class_name = format_to_symbol_identifier(document)
-        validate_ledgerized_class_name!(document_class_name, "entry's document", LedgerizerDocument)
+        #validate_ledgerized_class_name!(document_class_name, "entry's document", LedgerizerDocument)
         @document = document_class_name
       end
 
