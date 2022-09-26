@@ -100,8 +100,7 @@ module Ledgerizer
       end
 
       def add_account_to_collection(account_config)
-        p account_config
-        Ledgerizer::Definition::Account.new(account_config).tap do |account|
+        Ledgerizer::Definition::Account.new(**account_config).tap do |account|
           validate_unique_account!(account)
           accounts << account
         end
