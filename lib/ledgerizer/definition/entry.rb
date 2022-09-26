@@ -51,9 +51,7 @@ module Ledgerizer
 
         if accountable.present?
           accountable_class_name = format_to_symbol_identifier(accountable)
-          validate_ledgerized_class_name!(
-            accountable_class_name, "accountable", LedgerizerAccountable
-          )
+          #validate_ledgerized_class_name!(accountable_class_name, "accountable", LedgerizerAccountable)
         end
 
         validate_unique_account!(movement_type, account, accountable_class_name)
