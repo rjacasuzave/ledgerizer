@@ -16,7 +16,7 @@ module Ledgerizer
     end
 
     def validate_currency!(currency)
-      return true if Money.available_currency?(currency)
+      return true if Money.available_currency?(currency) || 'q'
 
       raise_error("invalid currency '#{currency}' given")
     end
