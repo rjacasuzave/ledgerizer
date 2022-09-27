@@ -25,6 +25,7 @@ module Ledgerizer
         create_entry
       rescue => exception
         p exception
+        p exception.backtrace
         return false
       end
       true
