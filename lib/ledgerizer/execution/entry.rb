@@ -154,10 +154,10 @@ module Ledgerizer
 
       def get_movement_mirror_currency(amount, mirror_currency)
         currency_format = { strategy: :symbol, use_default: false }
-        return format_currency(mirror_currency, currency_format) if mirror_currency
+        return format_currency(mirror_currency, **currency_format) if mirror_currency
         return if conversion_amount.blank?
 
-        format_currency(amount.currency.to_s, currency_format)
+        format_currency(amount.currency.to_s, **currency_format)
       end
 
       def get_entry_mirror_currency
