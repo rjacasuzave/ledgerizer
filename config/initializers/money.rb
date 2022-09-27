@@ -10,7 +10,7 @@ MoneyRails.configure do |config|
         symbol:              "",
         symbol_first:        true,
         subunit:             "subQ",
-        subunit_to_unit:     100,
+        subunit_to_unit:     1,
         thousands_separator: ".",
         decimal_mark:        ","
     }
