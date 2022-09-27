@@ -61,8 +61,8 @@ module Ledgerizer
 
     def load_formatted_currencies
       formatter_config = { strategy: :upcase, use_default: false }
-      self.currency = format_currency(currency, formatter_config) if currency
-      self.mirror_currency = format_currency(mirror_currency, formatter_config) if mirror_currency
+      self.currency = format_currency(currency, **formatter_config) if currency
+      self.mirror_currency = format_currency(mirror_currency, **formatter_config) if mirror_currency
     end
   end
 end
